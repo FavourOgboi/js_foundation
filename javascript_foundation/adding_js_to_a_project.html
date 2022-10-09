@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello world</h1>
+    <h4>making the button below functional</h4>
+    <!--
+        Using internal javascript
+    -->
+    <button onclick="alert('Hello!!!')">Click me</button>
+    <!--created using  btn.btn*6{Random button}
+    To create functionality to the buttons below we can us 
+    an external js even without creating a new js file. 
+    To do this we use a script tag. a script tag should always
+    be below(better that way)
+
+    It can allow us to apply more flexibility to our code easily
+    But
+    This code will only make this file functinal but not others.
+    -->
+    <button class="btn">random button</button>
+    <button class="btn">random button</button>
+    <button class="btn">random button</button>
+    <button class="btn">random button</button>
+    <button class="btn">random button</button>
+    <button class="btn">random button</button>
+
+    <script>
+        document.querySelectorAll('.btn').forEach((item) => {
+            item.addEventListener('click',() => {
+                alert("this is confusing right now, LOL")
+            })
+        })
+    </script>
+
+    <!--To add js externally visit file
+     affected by external js and also
+    external js file-->
+</body>
+</html>
